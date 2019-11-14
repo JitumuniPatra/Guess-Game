@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h1>Guess the Number</h1>
+<input type="textbox" id="selected">
+<br/>
+<br/>
+
+<div style="float: left; width: 90px">
+
+<button type="submit" onclick="gNum()">Guess</button>
+</div>
+
+    
+
+<form action = "page1.html">
+<input type="submit" value="Play Again">
+</form>
+<p id="mesage"></p>
+<script>
+      function gNum()
+      {
+         var randomItem = localStorage.getItem("randomItem");
+      var input = document.getElementById("selected").value;
+      //window.localStorage.getItem("page2");
+      console.log(input);
+      if(!input){
+         alert("Enter a Number");
+         return;
+      }
+      var count = 0;
+      var inputLength = input.length;
+      for(let i =0;i <inputLength;i++){
+         if(input[i] == randomItem[i])  {
+            count++;
+         }
+      }
+      document.getElementById('mesage').innerText = count+' '+'numbers are Matched';
+      //   alert(count+' '+'numbers are Matched');
+   } 
+</script>
+
+
+</body>
+</html>

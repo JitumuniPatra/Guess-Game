@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="5; url=page3.html">
+
+</head>
+<body>
+
+<h1>Generate the Number</h1>
+
+<p id="x"></p>
+
+<script>
+  var randomItem = Math.floor(Math.random() * 1000000) + 1;
+  // window.localStorage = randomItem;
+  localStorage.setItem("randomItem", randomItem);
+  document.getElementById("x").innerHTML = randomItem;
+
+
+</script>
+<button type="text">Generate</button>
+
+<p> Refreshing the page in 5 seconds .... </p>
+
+</body>
+</html>
